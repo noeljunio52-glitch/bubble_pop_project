@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bubble Pop Challenge | CC104 Game Project</title>
+  <!-- Bootstrap and jQuery are stored locally so the game runs offline -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container py-4">
+    <div class="game-card mx-auto">
+
+      <header class="text-center mb-3">
+        <h1 class="h3 mb-1">Bubble Pop Challenge</h1>
+        <p class="subtitle small mb-0">Pop the bubbles before they get too big! Three bursts and the game is over.</p>
+      </header>
+
+      <!-- Score and lives -->
+      <section class="row text-center g-2 mb-2">
+        <div class="col-6"><div class="stat-box"><div class="stat-label">Score</div><div class="stat-value" id="score">0</div></div></div>
+        <div class="col-6"><div class="stat-box"><div class="stat-label">Lives</div><div class="stat-value lives" id="lives" aria-live="polite">&#9829;&#9829;&#9829;</div></div></div>
+      </section>
+
+      <div id="message" class="alert alert-info py-2 text-center" role="status" aria-live="polite"></div>
+
+      <!-- Bounded game area: bubbles are created here by js/game.js -->
+      <div id="area" class="area" aria-label="Bubble game area"></div>
+
+      <div class="text-center mt-3">
+        <button type="button" id="reset-btn" class="btn btn-primary px-4">Reset</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
